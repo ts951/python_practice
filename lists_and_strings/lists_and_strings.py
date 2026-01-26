@@ -12,7 +12,6 @@ def largest_element(a):
     """
 
     if not isinstance(a, list):
-        print("Give me a list, not whatever that is.")
         return None
 
     max_a = None
@@ -23,3 +22,5 @@ def largest_element(a):
             max_a = element
 
     return max_a
+
+#def reverse_list():
