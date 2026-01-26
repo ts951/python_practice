@@ -7,6 +7,7 @@ from lists_and_strings import largest_element
 def test_largest_element():
     """
     Test function for largest_element
+    Should output 4, None, 2, and None for each test
     """
     print("largest_element tests:")
     test_cases = [[2, 4, 1, -1, -3],
