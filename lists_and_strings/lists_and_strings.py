@@ -40,3 +40,20 @@ def reverse_list(a):
         curr_index -= 1
 
     return reverse_a
+
+def check_if_contains(check_element, a):
+    """
+    Check if an input list contains an input element and output
+    True or False, without just sing "if check_element in a"
+    
+    :param check_element: Element to check a for
+    :param a: List to check for presence of check_element
+    """
+
+    is_contained = False
+    for element in a:
+        if element == check_element:
+            is_contained = True
+            break
+
+    return is_contained

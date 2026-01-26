@@ -2,7 +2,7 @@
 A series of test functions for each function in the module lists_and_strings.py
 """
 
-from lists_and_strings import largest_element, reverse_list
+from lists_and_strings import largest_element, reverse_list, check_if_contains
 
 
 def test_largest_element():
@@ -32,5 +32,20 @@ def test_reverse_list():
     for a in test_cases:
         print(f"\ta = {a}\n\tReversed list = {reverse_list(a)}")
 
+def test_check_if_contains():
+    """
+    Test function for check_if_contains
+    Should state that the 1st and 3rd test cases are contained in the test list
+    and that the 2nd and 4th test cases are not containe din the test list
+    """
+    test_list = [1, "a", 2, "b", 3, "c"]
+    test_cases = [2, 5, "b", "Hey!"]
+    print("check_if_contains tests:")
+    for test_case in test_cases:
+        if check_if_contains(test_case, test_list):
+            print(f"\t{test_case} is contained within {test_list}")
+        elif not check_if_contains(test_case, test_list):
+            print(f"\t{test_case} is not contained within {test_list}")
+
 # Call test function(s) here
-test_reverse_list()
+test_check_if_contains()
