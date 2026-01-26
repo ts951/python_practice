@@ -5,8 +5,8 @@ Module containing a variety of functions relating to lists and strings as outlin
 
 def largest_element(a):
     """
-    Returns the largest numerical element in the list "a" without just using .max()
-    Returns None if  with at least one int or float
+    Returns the largest numerical element in the list "a" without just using max()
+    Returns None if there is not at least one int or float in "a"
     
     :param a: input list to find the largest numerical element in
     """
@@ -23,4 +23,20 @@ def largest_element(a):
 
     return max_a
 
-#def reverse_list():
+def reverse_list(a):
+    """
+    Reverse a given list without using reverse()
+    
+    :param a: Input list to be reversed
+    """
+
+    if not isinstance(a, list):
+        return None
+
+    reverse_a = [None] * len(a)
+    curr_index = -1
+    for element in a:
+        reverse_a[curr_index] = element
+        curr_index -= 1
+
+    return reverse_a
