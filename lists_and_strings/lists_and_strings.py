@@ -57,3 +57,21 @@ def check_if_contains(check_element, a):
             break
 
     return is_contained
+
+def odd_elements(a):
+    """
+    Function that returns only the elements in odd positions
+    (starting at 1, so index 0 is position one)
+    
+    :param a: Input list
+    """
+
+    if not isinstance(a, list):
+        return None
+
+    odd_a = []
+    for i in range(1, len(a)+1):
+        if i%2 != 0:
+            odd_a.append(a[i-1])
+
+    return odd_a

@@ -2,7 +2,7 @@
 A series of test functions for each function in the module lists_and_strings.py
 """
 
-from lists_and_strings import largest_element, reverse_list, check_if_contains
+from lists_and_strings import largest_element, reverse_list, check_if_contains, odd_elements
 
 
 def test_largest_element():
@@ -47,5 +47,17 @@ def test_check_if_contains():
         elif not check_if_contains(test_case, test_list):
             print(f"\t{test_case} is not contained within {test_list}")
 
+def test_odd_elements():
+    """
+    Test function for odd_elements
+    Should output None, [1, 3, 5] and ["a", "c", "e"]
+    """
+    test_cases = ["Plip Plop",
+                  [1, 2, 3, 4, 5, 6],
+                  ["a", "b", "c", "d", "e"]]
+    print("odd_elements tests:")
+    for test_case in test_cases:
+        print(f"\tThe odd elements in {test_case} are: {odd_elements(test_case)}")
+
 # Call test function(s) here
-test_check_if_contains()
+test_odd_elements()
