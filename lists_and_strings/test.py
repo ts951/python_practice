@@ -2,8 +2,11 @@
 A series of test functions for each function in the module lists_and_strings.py
 """
 
-from lists_and_strings import largest_element, reverse_list, check_if_contains, odd_elements
-
+from lists_and_strings import (largest_element,
+                               reverse_list,
+                               check_if_contains,
+                               odd_elements,
+                               running_total)
 
 def test_largest_element():
     """
@@ -59,5 +62,18 @@ def test_odd_elements():
     for test_case in test_cases:
         print(f"\tThe odd elements in {test_case} are: {odd_elements(test_case)}")
 
+def test_running_total():
+    """
+    Test function for test_running_total
+    Should output None, None, 4, and 5
+    """
+    test_cases = ["AUGH",
+                  [1, 2, "hi", 3, 4],
+                  [1, 1, 1, 1],
+                  [5]]
+    print("running_total tests:")
+    for test_case in test_cases:
+        print(f"\tThe running_total of the elements in {test_case} is: {running_total(test_case)}")
+
 # Call test function(s) here
-test_odd_elements()
+test_running_total()

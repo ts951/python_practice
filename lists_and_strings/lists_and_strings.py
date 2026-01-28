@@ -75,3 +75,22 @@ def odd_elements(a):
             odd_a.append(a[i-1])
 
     return odd_a
+
+def running_total(a):
+    """
+    Function to calculate a running total for the elements in a,
+    assuming they are numeric
+    
+    :param a: Input list
+    """
+
+    if not isinstance(a, list):
+        return None
+
+    if all(isinstance(element, (int, float)) for element in a):
+        total = 0
+        for element in a:
+            total += element
+        return total
+
+    return None
