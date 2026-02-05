@@ -6,7 +6,8 @@ from lists_and_strings import (largest_element,
                                reverse_list,
                                check_if_contains,
                                odd_elements,
-                               running_total)
+                               running_total,
+                               is_palindrome)
 
 def test_largest_element():
     """
@@ -64,7 +65,7 @@ def test_odd_elements():
 
 def test_running_total():
     """
-    Test function for test_running_total
+    Test function for running_total
     Should output None, None, 4, and 5
     """
     test_cases = ["AUGH",
@@ -75,5 +76,23 @@ def test_running_total():
     for test_case in test_cases:
         print(f"\tThe running_total of the elements in {test_case} is: {running_total(test_case)}")
 
+def test_is_palindrome():
+    """
+    Test function for is_palindrome
+    """
+    test_cases = ["girafarig",
+                  "Ploop",
+                  "Radar",
+                  [1, 2, 3, 2, 1]]
+    print("is_palindrome tests:")
+    for test_case in test_cases:
+        test_result = is_palindrome(test_case)
+        if test_result is True:
+            print(f"\t{test_case} is a palindrome")
+        elif test_result is False:
+            print(f"\t{test_case} is not a palindrome")
+        elif test_result is None:
+            print(f"\t{test_case} is not a string")
+
 # Call test function(s) here
-test_running_total()
+test_is_palindrome()

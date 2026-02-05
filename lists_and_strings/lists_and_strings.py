@@ -94,3 +94,21 @@ def running_total(a):
         return total
 
     return None
+
+def is_palindrome(a):
+    """
+    Function to test if input string a is a palindrome
+    Returns None if the input is not a string
+    
+    :param a: Input string
+    """
+
+    if not isinstance(a, str):
+        return None
+
+    a = a.lower()
+    for i in range(int(len(a)/2)):
+        if a[i] != a[-i-1]:
+            return False
+
+    return True
