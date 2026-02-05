@@ -94,5 +94,18 @@ def test_is_palindrome():
         elif test_result is None:
             print(f"\t{test_case} is not a string")
 
+def test_running_total_recursion():
+    """
+    Test function for running_total_recursion
+    Should output None, None, 4, and 5
+    """
+    test_cases = ["AUGH",
+                  [1, 2, "hi", 3, 4],
+                  [1, 1, 1, 1],
+                  [5]]
+    print("running_total_recursion tests:")
+    for test_case in test_cases:
+        print(f"\tThe running total of the elements in {test_case} is: {running_total(test_case)}")
+
 # Call test function(s) here
-test_is_palindrome()
+test_running_total_recursion()

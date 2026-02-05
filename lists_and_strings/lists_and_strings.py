@@ -112,3 +112,30 @@ def is_palindrome(a):
             return False
 
     return True
+
+def sum_recursion(a, n):
+    """
+    Recursive function to calculate sum of elements in an array
+    
+    :param a: Array to fin sum of
+    :param n: Length of the array
+    """
+    if n <= 0:
+        return 0
+    return sum_recursion(a, n-1) + a[n-1]
+
+def running_total_using_recursion(a):
+    """
+    Function to calculate a running total for the elements in a,
+    assuming they are numeric, using recursion
+    
+    :param a: Input list
+    """
+
+    if not isinstance(a, list):
+        return None
+
+    if all(isinstance(element, (int, float)) for element in a):
+        return sum_recursion(a, len(a))
+
+    return None
